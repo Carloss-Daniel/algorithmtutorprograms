@@ -1,3 +1,6 @@
+# Splay tree implementation in Python
+# Author: AlgorithmTutor
+# Tutorial URL: http://algorithmtutor.com/Data-Structures/Tree/Splay-Trees/
 
 import sys
 
