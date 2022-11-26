@@ -1,8 +1,3 @@
-# Splay tree implementation in Python
-# Author: AlgorithmTutor
-# Tutorial URL: http://algorithmtutor.com/Data-Structures/Tree/Splay-Trees/
-
-# data structure that represents a node in the tree
 
 import sys
 
@@ -19,19 +14,17 @@ class SplayTree:
 
 	def __print_helper(self, currPtr, indent, last):
 		# print the tree structure on the screen
-	   	if currPtr != None:
+		if currPtr != None:
 			sys.stdout.write(indent)
 			if last:
-			  	sys.stdout.write("R----")
-			  	indent += "     "
+				sys.stdout.write("R----")
+				indent += "     "
 			else:
 				sys.stdout.write("L----")
 				indent += "|    "
-
 			print(currPtr.data)
-
 			self.__print_helper(currPtr.left, indent, False)
-			self.__print_helper(currPtr.right, indent, True)
+			self.__print_helper(currPtr.right, indent, True)	
 	
 	def __search_tree_helper(self, node, key):
 		if node == None or key == node.data:
@@ -55,7 +48,7 @@ class SplayTree:
 				node = node.left
 
 		if x == None:
-			print "Couldn't find key in the tree"
+			print ("Couldn't find key in the tree")
 			return
 		
 		# split operation
@@ -278,16 +271,16 @@ if __name__ == '__main__':
 	tree.insert(98)
 	tree.insert(1)
 	tree.pretty_print()
-	tree.search_tree(33)
-	tree.search_tree(44)
-	tree.pretty_print()
-	tree.delete_node(89)
-	tree.delete_node(67)
-	tree.delete_node(41)
-	tree.delete_node(5)
-	tree.pretty_print()
-	tree.delete_node(98)
-	tree.delete_node(1)
-	tree.delete_node(44)
-	tree.delete_node(33)
-	tree.pretty_print()
+	# tree.search_tree(33)
+	# tree.search_tree(44)
+	# tree.pretty_print()
+	# tree.delete_node(89)
+	# tree.delete_node(67)
+	# tree.delete_node(41)
+	# tree.delete_node(5)
+	# tree.pretty_print()
+	# tree.delete_node(98)
+	# tree.delete_node(1)
+	# tree.delete_node(44)
+	# tree.delete_node(33)
+	# tree.pretty_print()
